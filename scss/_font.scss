@@ -1,0 +1,103 @@
+$color-black: #0b090a;
+$color-darkgrey: #161a1d;
+$color-darkred: #660708;
+$color-grey: #b1a7a6;
+$color-lightgrey: #d3d3d3;
+$color-white: #f5f3f4;
+
+$redes: (rgb(68, 68, 180), facebook) (rgb(129, 19, 0), instagram)
+  (rgb(13, 119, 155), twitter) (rgb(196, 3, 3), gmail);
+
+@each $color, $redSocial in $redes {
+  .#{$redSocial} {
+    background-color: $color;
+  }
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?2c7ncu");
+  src: url("../fonts/icomoon.eot?2c7ncu#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?2c7ncu") format("truetype"),
+    url("../fonts/icomoon.woff?2c7ncu") format("woff"),
+    url("../fonts/icomoon.svg?2c7ncu#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak-as: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+
+.social-bar {
+  position: fixed;
+  right: 0;
+  top: 35%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 100;
+}
+
+.icon {
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem;
+  display: flex;
+  transition: all 0.5s;
+  &:first-child {
+    border-radius: 1rem 0 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 0 1rem;
+  }
+  &:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.42);
+    color: white;
+  }
+}
+
+.icon-facebook {
+  background-color: #3b5998;
+}
+
+.icon-instagram {
+  background-color: #dd2a7b;
+}
+
+.icon-twitter {
+  background-color: #00acee;
+}
+
+.icon-youtube {
+  background-color: #c4302b;
+}

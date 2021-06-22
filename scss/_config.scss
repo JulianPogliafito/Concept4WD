@@ -1,0 +1,20 @@
+$headings: (
+  h1: 4em,
+  h2: 3em,
+  h3: 2em,
+  h4: 1em,
+  h5: 0.75em,
+  h6: 0.3em,
+);
+
+@for $i from 1 through 4 {
+  .w-#{$i} {
+    width: $i * 25%;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: ($i * 100%)/12;
+  }
+}
