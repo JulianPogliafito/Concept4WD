@@ -314,36 +314,6 @@ footer {
     .listaEnvios div li {
       padding-top: 1vh; }
 
-.fotosProductos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  grid-area: foto; }
-
-.fotosProductos div {
-  margin: 0 1vw 10vh 1vw; }
-
-.fotosProductos div img {
-  height: 40vh;
-  width: 20vw;
-  border-radius: 20px; }
-
-.tablaProductos {
-  text-transform: uppercase;
-  background-color: #b1a7a6;
-  font-family: "Raleway", sans-serif;
-  font-weight: bolder; }
-
-.tablaProductos tr th {
-  padding: 10px 20px 10px 20px; }
-
-.tablaProductos tr td {
-  padding: 10px 20px 10px 20px; }
-
-.videoDemo {
-  margin: 0 0 5vh 30vw; }
-
 .formularioContacto {
   font-family: "Raleway", sans-serif;
   display: inline-block;
@@ -367,34 +337,53 @@ body {
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "navegacionLateral foto foto foto" "navegacionLateral foto foto foto" "navegacionLateral foto foto foto";
   flex: 1; }
+  #seccionPagina .navegacionLateral {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: fixed;
+    overflow: auto;
+    height: auto;
+    grid-area: navegacionLateral; }
+    #seccionPagina .navegacionLateral ul {
+      border: solid grey 4px;
+      background-color: white;
+      padding: 0; }
+      #seccionPagina .navegacionLateral ul li {
+        padding: 20px 100px 20px 20px;
+        list-style-type: none;
+        transition: 0.7s; }
+        #seccionPagina .navegacionLateral ul li:hover {
+          background-color: #b1a7a6; }
+    #seccionPagina .navegacionLateral a {
+      display: block;
+      text-decoration: none;
+      color: #161a1d; }
 
-.navegacionLateral {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  position: fixed;
-  overflow: auto;
-  height: auto;
-  grid-area: navegacionLateral; }
-
-.navegacionLateral ul {
-  border: solid grey 4px;
-  background-color: white; }
-
-.navegacionLateral ul li {
-  padding: 20px 100px 20px 10px; }
-
-.navegacionLateral ul li {
-  list-style-type: none;
-  transition: 0.7s; }
-
-.navegacionLateral a {
-  display: block;
-  text-decoration: none;
-  color: #161a1d; }
-
-.navegacionLateral ul li:hover {
-  background-color: #b1a7a6; }
+.fotosProductos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-area: foto;
+  margin-top: 3rem; }
+  .fotosProductos div {
+    margin: 0 1vw 10vh 1vw; }
+    .fotosProductos div img {
+      height: 40vh;
+      width: 20vw;
+      border-radius: 20px; }
+  .fotosProductos .tablaProductos {
+    text-transform: uppercase;
+    background-color: #b1a7a6;
+    font-family: "Raleway", sans-serif;
+    font-weight: bolder; }
+    .fotosProductos .tablaProductos tr {
+      padding: 0.7rem 1.5rem; }
+      .fotosProductos .tablaProductos tr th {
+        padding: 0.7rem 1.5rem; }
+      .fotosProductos .tablaProductos tr td {
+        padding: 0.7rem 1.5rem; }
 
 .flex {
   display: flex;
