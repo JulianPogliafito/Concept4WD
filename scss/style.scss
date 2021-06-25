@@ -2,15 +2,6 @@
 @import "font";
 @import "animation";
 
-@media (max-width: 991px) {
-  #logoimg {
-    display: none;
-  }
-  .navbar-nav {
-    flex-direction: column !important;
-  }
-}
-
 $color-black: #0b090a;
 $color-darkgrey: #161a1d;
 $color-darkred: #660708;
@@ -154,12 +145,11 @@ footer {
 .sobreNosotros {
   p {
     font-family: "Raleway", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     text-align: start;
     font-weight: 500;
     line-height: 2;
-    margin: 2vh 1vw 2vh 1vw;
-    padding-top: 20px;
+    margin: 3vh 3vw 3vh 0;
     position: relative;
     animation-name: aparlatizq;
     animation-duration: 0.3s;
@@ -175,6 +165,8 @@ footer {
     animation-duration: 0.3s;
     animation-delay: 0.1s;
     animation-timing-function: linear;
+    width: 600px;
+    height: 424px;
   }
 }
 
@@ -213,16 +205,17 @@ footer {
 
 .formularioContacto {
   font-family: "Raleway", sans-serif;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1vh 0 5vh 3vw;
   font-size: large;
   font-weight: bold;
-}
-
-.formularioContacto input {
-  padding: 10px;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
+  input {
+    padding: 10px;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+  }
 }
 
 body {
@@ -232,32 +225,35 @@ body {
 }
 
 #seccionPagina {
-  display: grid;
-  grid-template-columns: 15% 28.33% 28.33% 28.33%;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas:
-    "navegacionLateral foto foto foto"
-    "navegacionLateral foto foto foto"
-    "navegacionLateral foto foto foto";
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
   .navegacionLateral {
     font-family: "Raleway", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    position: fixed;
-    overflow: auto;
-    height: auto;
-    grid-area: navegacionLateral;
+    position: static;
     ul {
-      border: solid grey 4px;
+      border: solid grey 3px;
       background-color: white;
       padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       li {
         padding: 20px 100px 20px 20px;
         list-style-type: none;
         transition: 0.7s;
         &:hover {
           background-color: #b1a7a6;
+        }
+        a {
+          display: block;
+          text-decoration: none;
+          color: #161a1d;
         }
       }
     }
@@ -279,8 +275,8 @@ body {
   div {
     margin: 0 1vw 10vh 1vw;
     img {
-      height: 40vh;
-      width: 20vw;
+      height: 23rem;
+      width: 23rem;
       border-radius: 20px;
     }
   }
@@ -299,11 +295,158 @@ body {
       }
     }
   }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+// MediasQueries
+
+@media (max-width: 1110px) {
+  footer .site-map .section-map {
+    padding: 0.5rem;
+  }
+  .logo-footer {
+    display: none;
+  }
+}
+
+@media (max-width: 735px) {
+  footer .site-map {
+    display: none;
+  }
+  footer .logo-footer {
+    display: block;
+  }
+}
+
+@media (min-width: 1030px) {
+  #logoimg2 {
+    display: none;
+  }
+}
+
+@media (max-width: 1029px) {
+  #logoimg {
+    display: none;
+  }
+  .navbar-nav {
+    flex-direction: column !important;
+  }
+  div .titulo-cinta {
+    display: none;
+  }
+}
+
+// Responsive nosotros
+
+@media (max-width: 1399px) {
+  .sobreNosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-top: 1rem;
+    }
+  }
+  #seccionPagina {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .navegacionLateral {
+      font-family: "Raleway", sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      position: static;
+      ul {
+        border: solid grey 4px;
+        background-color: white;
+        padding: 0;
+        li {
+          display: flex;
+          padding: 20px 100px 20px 20px;
+          list-style-type: none;
+          transition: 0.7s;
+          &:hover {
+            background-color: #b1a7a6;
+          }
+        }
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: #161a1d;
+      }
+    }
+  }
+}
+
+@media (max-width: 585px) {
+  #seccionPagina {
+    .navegacionLateral ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      border: solid grey 3px;
+      background-color: white;
+      li {
+        list-style-type: none;
+        transition: 0.7s;
+        &:hover {
+          background-color: #b1a7a6;
+        }
+      }
+    }
+    .fotosProductos div {
+      img {
+        height: 15rem;
+        width: 15rem;
+      }
+      tr {
+        padding: 0.35rem 0.75rem;
+        th {
+          padding: 0.35rem 0.75rem;
+        }
+        td {
+          padding: 0.35rem 0.75rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 905px) {
+  #seccionPagina .navegacionLateral ul li {
+    padding: 20px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sobreNosotros {
+    img {
+      width: 360px;
+      height: 254px;
+      margin-top: 1rem;
+    }
+    p {
+      margin: 0 auto;
+    }
+  }
+  .listaEnvios img {
+    display: none;
+  }
+  div iframe {
+    width: 360px;
+    height: 270px;
+  }
+  .banner h2 {
+    margin: 3vh 1vw 4vh 10vw;
+  }
 }

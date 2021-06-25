@@ -27,8 +27,8 @@
     <header>
 
       <!-- navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid d-flex justify-content-around">
           <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,7 +42,14 @@
                 <a class="nav-link text-white fs-5" href="nosotros.html">NOSOTROS</a>
               </li>
               <li id="logoimg">
-                <a class="navbar-brand"><img src="../media/logo-sin-fondo.png" alt="logoORP"></a>
+                <a class="navbar-brand">
+                  <img src="../media/logo-sin-fondo.png" alt="logoConcept4wd">               
+                </a>
+              </li>
+              <li id="logoimg2">
+                <a class="navbar-brand">
+                  <img src="../media/logo-concept.png" alt="logoConcept4wd">               
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white fs-5" href="productos.html">PRODUCTOS</a>               
@@ -50,16 +57,12 @@
               <li class="nav-item">
                 <a class="nav-link text-white fs-5" href="contacto.html">CONTACTO</a>
               </li>
-            </ul>
-            <!-- <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-secondary" type="submit">BUSCAR</button>
-                  </form> -->
+            </ul>        
           </div>
         </div>
       </nav>
-  </header>
-
+    </header>
+  
   <div class="social-bar">
     <a href="https://www.facebook.com/" class="icon icon-facebook" target="_blank"></a>
     <a href="https://www.instagram.com/" class="icon icon-instagram" target="_blank"></a>
@@ -125,17 +128,44 @@
 
     <!-- pie de pagina -->
     <footer class="container-fluid bg-dark d-flex align-items-center">
-        <div class="container d-flex justify-content-between">
-          <div class="d-flex align-items-center col-sm-6 ">
-              <a href="https://www.facebook.com" target="_blank"><img class="imgIF px-2" src="../media/facebookLogo.jpg" alt="facebookLogo"></a>
-              <a href="https://www.instagram.com" target="_blank"><img class="imgIF px-2" src="../media/instagramLogo.jpg" alt="instagramLogo"></a>
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="site-map">
+          <div class="section-map">
+            <h5>Productos</h5>
+            <ul>
+              <li><a href="">Lamparas Led</a></li>
+              <li><a href="">Faros Led</a></li>
+              <li><a href="">Barras Led</a></li>
+              <li><a href="">Accesorios</a></li>
+            </ul>
           </div>
-          <div class="copyR">
-              <p>&copy 2021 - OFFROADPOWER Todos los derechos reservados</p>
+          <div class="section-map">
+            <h5>Quienes Somos</h5>
+            <ul>
+              <li><a href="">Nosotros</a></li>
+              <li><a href="">Trayectoria</a></li>
+              <li><a href="">Ubicacion</a></li>
+            </ul>
+          </div>
+          <div class="section-map">
+            <h5>Contacto</h5>
+            <ul>
+              <li><a href="">Consultas</a></li>
+              <li><a href="">Problemas</a></li>
+              <li><a href="">Garantia</a></li>
+            </ul>
           </div>
         </div>
-      </footer>
-
+        <div class="logo-footer">
+          <img src="../media/logo-concept.png" alt="Concept4WD">
+        </div>
+        <div class="copyR">
+          <p>&copy 2021 - CONCEPT 4WD </p>
+          <P>Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
 
